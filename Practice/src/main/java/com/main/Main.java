@@ -11,7 +11,11 @@ public class Main {
 		ArraysOperations dup_finder = new ArraysOperations();
 		//dup_finder.findDuplicates();
 		CountWordsInParagraph countWords = new CountWordsInParagraph();
-		countWords.calculateWords();
+		//countWords.calculateWords();
+		TwoSummers summing = new TwoSummers();
+		Integer A[] = {0, -1, 2, -3, 1};
+	      Integer x = -2;
+		summing.processArray(A, x);
 	}
 
 }
