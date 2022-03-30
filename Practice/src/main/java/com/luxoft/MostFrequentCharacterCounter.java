@@ -9,7 +9,7 @@ public class MostFrequentCharacterCounter extends CharacterCounter
 
 	public MostFrequentCharacterCounter(String message)
 	{
-		message = this.message;
+		this.message = message;
 	}
 
 	@Override
@@ -18,7 +18,7 @@ public class MostFrequentCharacterCounter extends CharacterCounter
 		StringBuffer newMessage = new StringBuffer();
 		if(message!=null)
 		{
-			//replace all whitespaces
+			message = message.replaceAll(" ", "").toUpperCase();
 		}
 		
 		
@@ -41,9 +41,15 @@ public class MostFrequentCharacterCounter extends CharacterCounter
 			{
 				finalCounts.put(splittedValues, 1);
 			}
-			highestCountLetter=finalCounts.values().stream().sorted().findFirst().toString();
+			
 		}
-		
+		System.out.println("final counts:: "+finalCounts);
+		highestCountLetter=finalCounts
+				.entrySet()
+				.stream()
+				.max((entry1, entry2) -> entry1.getValue() > entry2.getValue() ? 1 : -1)
+				.get()
+				.getKey();
 		return highestCountLetter;
 		
 	}

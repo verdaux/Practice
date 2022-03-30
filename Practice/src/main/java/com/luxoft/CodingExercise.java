@@ -9,7 +9,7 @@ public class CodingExercise {
 
         final CharacterCounter characterCounter = new MostFrequentCharacterCounter(message);
 
-        System.out.println(characterCounter.getCharacter());
+        System.out.println("most occured is:: "+characterCounter.getCharacter());
     }  
 
 }
