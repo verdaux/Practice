@@ -15,7 +15,10 @@ public class BubbleSortArray
 		intArray[5] = 1;
 		intArray[6] = -22;
 		
-		for(int lastUnsortedIndex = intArray.length -1; lastUnsortedIndex>0;lastUnsortedIndex--)
+		for(
+				int lastUnsortedIndex = intArray.length -1;
+				lastUnsortedIndex>0;
+				lastUnsortedIndex--)
 		{
 			for (int i = 0; i < lastUnsortedIndex; i++)
 			{
@@ -25,12 +28,9 @@ public class BubbleSortArray
 				}
 			}
 		}
-		
-		for (int i = 0; i < intArray.length; i++)
-		{
-			System.out.print(intArray[i]+",");
-			
-		}
+
+			System.out.println(Arrays.toString(intArray));
+			Arrays.stream(intArray).forEach(System.out::println);
 	}
 	
 	public static void swap(int[] array, int i, int j)
