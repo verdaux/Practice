@@ -29,8 +29,8 @@ public class SortedHashValues
 	
 	public void hashTraverser(HashMap<Integer, String> hm)
 	{
-		Set sets = hm.entrySet();
-		Iterator itr = sets.iterator();
+		Set<Entry<Integer, String>> sets = hm.entrySet();
+		Iterator<Entry<Integer, String>> itr = sets.iterator();
 		
 		while (itr.hasNext())
 		{
