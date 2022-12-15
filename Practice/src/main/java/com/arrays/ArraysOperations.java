@@ -22,4 +22,9 @@ public class ArraysOperations
 	    }
 	}
 
+	public static void main(String[] args)
+	{
+		ArraysOperations arrOps = new ArraysOperations();
+		arrOps.findDuplicates();
+	}
 }
